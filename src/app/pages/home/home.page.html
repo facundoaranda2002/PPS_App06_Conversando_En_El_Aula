@@ -1,0 +1,40 @@
+<ion-content [fullscreen]="true">
+  @if(this.authService.currentUserSig())
+  {
+    <h1>Bienvenido {{this.authService.currentUserSig()?.username}}</h1>
+    <ion-fab slot="fixed" vertical="bottom" horizontal="start">
+      <ion-fab-button (click)="logout()">
+        <ion-icon name="arrow-back-outline"></ion-icon>
+      </ion-fab-button>
+    </ion-fab>
+  
+    
+  }
+  @else {
+    <ion-grid>
+      <ion-row class="logo">
+        <ion-col>
+          <ion-img src="assets/iconapp04.png"></ion-img>
+          <ion-label>
+            <p class="ion-text-left logoLabel">A ejercitar</p>
+            <p class="ion-text-left">la memoria</p>
+          </ion-label>
+        </ion-col>
+      </ion-row>
+      <div class="authButton">
+        <ion-button size="large" expand="block" shape="round" color="primary"
+        (click)="goLogin()">
+          <ion-text color="white">Ingresar</ion-text>
+        </ion-button>
+        <ion-button size="large" expand="block" shape="round" color="white" 
+        (click)="goRegister()">
+          <ion-text color="primary">Registrarse</ion-text>
+        </ion-button> 
+      </div>
+    </ion-grid>
+  }
+
+ 
+  
+  
+</ion-content>
