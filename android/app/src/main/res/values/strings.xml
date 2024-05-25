@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
-    <string name="app_name">ppsapp04</string>
-    <string name="title_activity_main">ppsapp04</string>
-    <string name="package_name">io.ionic.starter</string>
-    <string name="custom_url_scheme">io.ionic.starter</string>
+    <string name="app_name">ppsapp06</string>
+    <string name="title_activity_main">ppsapp06</string>
+    <string name="package_name">app6.chat</string>
+    <string name="custom_url_scheme">app6.chat</string>
 </resources>

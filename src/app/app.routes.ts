@@ -14,8 +14,27 @@ export const routes: Routes = [
     loadComponent: () => import('./pages/registro/registro.page').then( m => m.RegistroPage)
   },
   {
+    path: 'splash',
+    loadComponent: () => import('./pages/splash/splash.page').then( m => m.SplashPage)
+  },
+  {
+    path: 'chat',
+    loadComponent: () =>
+      import('./pages/chat/chat.page').then((m) => m.ChatPage),
+  },
+  {
+    path: 'chat4a',
+    loadComponent: () =>
+      import('./pages/chat/chat.page').then((m) => m.ChatPage),
+  },
+  {
+    path: 'chat4b',
+    loadComponent: () =>
+      import('./pages/chat/chat.page').then((m) => m.ChatPage),
+  },
+  {
     path: '**',
-    redirectTo: 'login',
+    redirectTo: 'splash',
   }
 ];
 

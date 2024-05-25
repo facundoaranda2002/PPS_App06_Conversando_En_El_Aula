@@ -1,12 +1,26 @@
 <ion-content [fullscreen]="true">
   @if(this.authService.currentUserSig())
   {
-    <h1>Bienvenido {{this.authService.currentUserSig()?.username}}</h1>
-    <ion-fab slot="fixed" vertical="bottom" horizontal="start">
-      <ion-fab-button (click)="logout()">
-        <ion-icon name="arrow-back-outline"></ion-icon>
-      </ion-fab-button>
-    </ion-fab>
+    @defer{
+      <div class="contenedorCustom">
+        <ion-button (click)="goChat4A()" color="tertiary" class="btnClase"
+          >PPS-4A</ion-button
+        >
+        <ion-button (click)="goChat4B()" color="primary" class="btnClase"
+          >PPS-4B</ion-button
+        >
+      </div>
+      <ion-fab slot="fixed" vertical="top" horizontal="start">
+        <ion-fab-button (click)="logout()">
+          <ion-icon name="arrow-back-outline"></ion-icon>
+        </ion-fab-button>
+      </ion-fab>
+    }
+    @placeholder {
+      <ion-spinner class="spinner" color="danger"></ion-spinner>
+    } @loading (minimum 2s) {
+      <ion-spinner class="spinner" color="danger"></ion-spinner>  
+    }
   
     
   }
@@ -14,10 +28,10 @@
     <ion-grid>
       <ion-row class="logo">
         <ion-col>
-          <ion-img src="assets/iconapp04.png"></ion-img>
+          <ion-icon name="chatbox-ellipses"></ion-icon>
           <ion-label>
-            <p class="ion-text-left logoLabel">A ejercitar</p>
-            <p class="ion-text-left">la memoria</p>
+            <p class="ion-text-left logoLabel">Empieza</p>
+            <p class="ion-text-left">la conversación</p>
           </ion-label>
         </ion-col>
       </ion-row>
